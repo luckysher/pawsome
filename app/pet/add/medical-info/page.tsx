@@ -1,12 +1,22 @@
 "use client";
-import React from 'react';
+import React, {useState, ChangeEvent} from 'react';
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { Button } from "@/components/ui/button";
 import { Steps } from "@/components/steps";
 
 export default function MedicalInfoPage() {
+    const [isNeutred, setIsNuetred] = useState("Yes");
+    const [isKCICertified, setIsKCICertified] = useState("Yes");
     
+    const handleOnCheckChange = (e:ChangeEvent<HTMLInputElement>) => {
+        if(e.target.name.indexOf("neutred-") >= 0){
+             setIsNuetred(e.target.value);   
+        } else {
+            setIsKCICertified(e.target.value);
+        }
+    }
+
     return (
         <div className=' px-5 pt-30'>
             
@@ -85,7 +95,7 @@ export default function MedicalInfoPage() {
                                         <div className='flex gap-6 mt-3'>
                                             {
                                                 ['Yes', 'No'].map((ans:string,i:number) => (
-                                                    <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all mt-2"><input type="radio" id={`neutred-${i}`} name={`neutred-${i}`} className="h-11 px-2 accent-amber-700" checked={"Yes" === ans} value={ans} />{ans}</label>
+                                                    <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all mt-2"><input type="radio" id={`neutred-${i}`} name={`neutred-${i}`} className="h-11 px-2 accent-amber-700" checked={ans === isNeutred} onChange={handleOnCheckChange} value={ans} />{ans}</label>
                                                 ))
                                             }
                                         </div>
@@ -97,7 +107,7 @@ export default function MedicalInfoPage() {
                                         <div className='flex gap-6 mt-3'>
                                             {
                                                 ['Yes', 'No'].map((ans:string,i:number) => (
-                                                    <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all mt-2"><input type="radio" id={`certified-${i}`} name={`certified-${i}`} className="h-11 px-2 accent-amber-700" checked={"Yes" === ans} value={ans} />{ans}</label>
+                                                    <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all mt-2"><input type="radio" id={`certified-${i}`} name={`certified-${i}`} className="h-11 px-2 accent-amber-700" checked={ans === isKCICertified} onChange={handleOnCheckChange} value={ans} />{ans}</label>
                                                 ))
                                             }
                                         </div>

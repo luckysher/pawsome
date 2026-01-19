@@ -14,6 +14,12 @@ export default function BasicInfoPage() {
     const file2Ref = useRef<HTMLInputElement>(null);
     const file3Ref = useRef<HTMLInputElement>(null);
 
+    const [dogGender, setDogGender] = useState("Male");
+    
+    const handleOnCheckChange = (e:ChangeEvent<HTMLInputElement>) => {
+             setDogGender(e.target.value);   
+    }
+
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>, i: number) => {
         if(e.target && e.target.files && e.target.files.length > 0){
             
@@ -143,7 +149,7 @@ export default function BasicInfoPage() {
                                 <div className='flex gap-6 mt-3'>
                                     {
                                         ['Male', 'Female'].map((gender:string,i:number) => (
-                                            <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all"><input type="radio" id={`gender-${i}`} name={`gender-${i}`} className="h-11 px-2 accent-amber-700" checked={"Male" === gender} value={gender} />{gender}</label>
+                                            <label key={i} className="flex items-center gap-1 text-sm font-karla font-medium text-gray-700 transition-all"><input type="radio" id={`gender-${i}`} name={`gender-${i}`} className="h-11 px-2 accent-amber-700" checked={ dogGender === gender} onChange={handleOnCheckChange} value={gender} />{gender}</label>
                                         ))
                                     }
                                 </div>
