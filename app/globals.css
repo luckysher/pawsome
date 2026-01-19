@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #FF6C31;
+  --white: #ffffff;  
+  
+  --color-gray-50: #5F6D7E;
+  --color-gray-100: #E8E5E8;
+  --color-gray-400: #BCB8BB;
+  --color-gray-500: #797779;
+  --color-gray-600: #667085;
+  --color-gray-700: #363636;
+  --color-gray-800: #383A47;
+
+  --color-amber-800:  #FF6C31;
+  --color-amber-700: #FF8C59;
+  --color-amber-900: #c44b17; 
+  --color-amber-900: #c44b17; 
+
+  --color-red-800: #DB3918; 
+  
+  --color-orange-100: #FFEAD2; 
+  --color-orange-200: #FFF5CD;
+  --color-orange-300: #FFEBE3; 
+  --color-orange-400: #FFF4EF;
+  --color-orange-500: #FFC8B3; 
+  --color-orange-900: #7A060B; 
+
+  --color-yellow-500: #FFD00B; 
+   
+  --color-neutral-200: #F8F8F8;
+  --color-neutral-500: #EBEBEB;
+
+  --color-green-500: #1DA01A;
+
+  --color-blue-500: #7B7FC7;
+
+  --font-inter: Inter;
+  --font-lato: Lato;
+  --font-karma: Karma;
+  --font-karla: Karla;
+}
+
+@theme inline {
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-amber-700: var(--color-amber-700);
+  --color-amber-800: var(--primary);
+  --color-amber-900: var(--color-amber-900);
+
+  --color-gray-50: var(--color-gray-50);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-800: var(--color-gray-800);
+
+  --color-red-800: var(--color-red-800);
+
+  --color-orange-100: var(--color-orange-100);    
+  --color-orange-200: var(--color-orange-200);
+  --color-orange-300: var(--color-orange-300);
+  --color-orange-400: var(--color-orange-400);
+  --color-orange-500: var(--color-orange-500);
+  --color-orange-900: var(--color-orange-900);
+
+  --color-yellow-500: var(--color-yellow-500);
+
+  --font-inter: var(--font-inter), sans-serif;
+  --font-lato: var(--font-lato), sans-serif;
+  --font-karma: var(--font-karma), serif;
+  --font-karla: var(--font-karla), sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  width: 100%;  
+}
+
+main {
+  width: 100%;
+}
+
+
+.text-primary {
+  color: var(--primary);
+}
+
+header a {
+  font-family: var(--font-inter), 'system-ui', sans-serif;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  
+  width: 20px;
+  height: 20px;
+  border: 2px solid darkgray;
+  border-radius: 50%; 
+  outline: none;
+  cursor: pointer;
+  
+}
+
+input[type="radio"]:checked {
+  border-color: var(--color-gray-300); 
+  background-color: var(--color-gray-300); 
+  background-image: url('/circle.png');
+  background-position: center;
+  background-repeat: no-repeat;  
+  background-size: 60%;
+}
