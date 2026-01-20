@@ -38,7 +38,7 @@ export default function OrdersSection() {
                 </div>
             </div>
 
-            <div className='flex flex-row gap-4 justify-center mt-15'>
+            <div className='flex flex-row gap-10 justify-center mt-15'>
                 {
                     products.map((product, i) => (
                         <div key={i} className='flex flex-col border border-neutral-500 rounded-xl'>
@@ -48,7 +48,7 @@ export default function OrdersSection() {
                                         <div className='flex flex-col mb-auto'>
                                             <div className='font-lato font-normal text-[10px] bg-blue-500 rounded-tl-lg rounded-br-lg px-1.5 py-1 text-white'>Newly Added</div>    
                                         </div>
-                                        <div className='flex flex-col pt-3.5'>
+                                        <div className='flex flex-col pt-3.5 px-0.5'>
                                             <Image                                
                                                 src={product.image}
                                                 alt="image"

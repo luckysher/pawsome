@@ -19,7 +19,7 @@ export default function VetClinicSection() {
                     <div className='font-inter font-normal text-base text-gray-50 mt-4'>Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</div>
                 </div>
             </div>
-            <div className='flex flex-row gap-8 justify-center mt-15'>
+            <div className='flex flex-row gap-10 justify-center mt-15'>
                 {
                     clinics.map((clinic, i) => (
                         <div key={i} className='flex flex-col'>

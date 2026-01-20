@@ -16,7 +16,7 @@ export function Header() {
     const items = [
         { href: "/", title: "Home", subMenu: [] },
         { href: "/shop", title: "Shop", subMenu: [{ href: "/shop", title: "Shop"}, { href: "/vetenery", title: "Vetenery"}] },
-        { href: "/vetenery", title: "Vetenery", subMenu: [] },
+        { href: "/vetenery", title: "Vetenery", subMenu: [{ href: "/vetenery-1", title: "Vetenery-1"}, { href: "/vetenery-2", title: "Vetenery-2"}] },
         { href: "/community", title: "Community", subMenu: [] }
     ];
     
@@ -41,21 +41,37 @@ export function Header() {
                             </Link>
 
                             {/* Navigation */}
-                            <nav className="flex gap-8">
+                            <nav className="hidden items-center gap-6 lg:flex">
                                 {items.map((item, index) => (
                                     <div key={index} className="flex gap-2">                                        
                                         {
                                             (item.subMenu.length > 0) ? (
-                                                <div className="flex gap-2">
+                                                <div className="group relative z-50">
                                                     <Link
                                                         key={index}
                                                         href={item.href}
-                                                        className={"text-base font-semibold text-gray-600"}
+                                                        className={"flex items-center transition duration-200 ease-linear text-base font-semibold text-gray-600 group-hover:text-gray-800"}
                                                     >
-                                                        {item.title} 
-                                                    </Link>                                                    
-                                                    <Icon icon="radix-icons:caret-down" className="text-2xl text-semibold" />
-                                                </div>  
+                                                        {item.title}
+                                                        <Icon icon="radix-icons:caret-down" className="text-2xl text-semibold text-gray-500 transition duration-200 ease-out group-hover:-rotate-180 group-hover:text-amber-800" />
+                                                    </Link>       
+
+                                                    <div className="absolute left-0 top-full pt-9 pointer-events-none -translate-y-3 opacity-0 transition duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 ">
+                                                        <div className="flex w-45 rounded shadow-xs bg-white">
+                                                            <div className="flex flex-1 flex-col gap-2 p-2">
+                                                                {
+                                                                    item.subMenu.map((subItem, i) => (
+                                                                        <Link key={i} className="flex items-center gap-3.5 rounded px-3 py-2.5 transition ease-linear hover:bg-orange-100" href={subItem.href}>                                                    
+                                                                            <div className="text-sm text-gray-900">{subItem.title}</div>
+                                                                        </Link> 
+                                                                    ))
+                                                                }
+                                                                                                                                                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    
                                             ):(
                                                 <div className="flex">
                                                     <Link
@@ -70,22 +86,23 @@ export function Header() {
                                         }
                                     </div>
                                 ))}
-                            </nav>
+                            </nav>                            
                         </div>
                         {/* Buttons */}
                         <div className="flex h-16 items-center gap-1 pb-3">
                             {/* Login button */}
                             <Link
                                 href={"/auth/login"}
-                                className={"text-base font-semibold text-gray-600 hover:text-white hover:shadow-lg hover:bg-amber-900 btn-link rounded-xl transition duration-200 ease-in-out px-5 py-2.5"}
+                                className='text-base font-semibold border border-white hover:shadow-xl hover:border-amber-800 hover:cursor-pointer p-3 rounded-xl text-gray-600 hover:text-amber-800 tracking-wider transition duration-200 ease-in-out px-5 py-2.5' title={"Log in"}
                             >
                                 Log in
                             </Link>
+                            
 
                             {/* Sign up button */}
                             <Link
                                 href={"/auth/sign-up"}
-                                className={"text-base font-semibold bg-amber-800 text-white hover:shadow-lg hover:bg-amber-900 btn-link active  transition duration-200 ease-in-out rounded-xl px-5 py-2.5"}
+                                className={"text-base font-semibold  border border-amber-800 bg-amber-800 text-white hover:shadow-lg hover:bg-white hover:text-amber-800 btn-link active  transition duration-200 ease-in-out rounded-xl px-5 py-2.5"}
                             >
                                 Sign up                                
                             </Link>

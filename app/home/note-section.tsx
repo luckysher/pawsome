@@ -10,7 +10,7 @@ export default function NoteSection() {
     
     return (
         <div className='flex flex-col py-10'>
-            <div className='flex flex-col px-5 py-3 bg-orange-100'>
+            <div className='flex flex-col px-7 py-3 bg-orange-100'>
                 <div className='flex flex-row items-center justify-between p-1'>
                     <div className='flex flex-row items-center gap-2.5'>
                         <Image                                

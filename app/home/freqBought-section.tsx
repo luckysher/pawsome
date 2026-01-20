@@ -38,7 +38,7 @@ export default function FrequentlyBoughtSection() {
                 </div>
             </div>
 
-            <div className='flex flex-row gap-8 justify-center mt-15'>
+            <div className='flex flex-row gap-10 justify-center mt-15'>
                 {
                     products.map((product, i) => (
                         <div key={i} className='flex flex-col border border-neutral-500 rounded-xl'>
