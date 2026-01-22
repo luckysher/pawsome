@@ -14,22 +14,28 @@ export default function VetClinicSection() {
     return (
         <div className='flex flex-col py-10 mt-10'>            
             <div className='flex flex-row justify-center'>
-                <div className='flex flex-col text-center w-2/3'>
+                <div className='flex flex-col text-center w-full sm:w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3 px-5'>
                     <h1 className='font-inter font-bold text-[32px]'>Nearby Vet Clinic</h1>            
                     <div className='font-inter font-normal text-base text-gray-50 mt-4'>Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</div>
                 </div>
             </div>
-            <div className='flex flex-row gap-10 justify-center mt-15'>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 px-6 mt-15 gap-6 sm:gap-6 ">                
                 {
                     clinics.map((clinic, i) => (
                         <div key={i} className='flex flex-col'>
-                            <Image                                
-                                src={clinic.image}
-                                alt="image"
-                                width={385}
-                                height={0}
-                            />
-                            <div className='p-2.5 bg-neutral-200 border border-neutral-500 rounded-xl'>
+                            <div className='relative'> 
+                                <Image
+                                    src={clinic.image}
+                                    alt="image"
+                                    blurDataURL="data:..."
+                                    placeholder="blur"
+                                    width={1000}
+                                    height={0}
+                                    style={{width: "100%", height: "auto"}}
+                                />
+                            </div>
+                            <div className='p-2.5 bg-neutral-200 border border-neutral-500 rounded-b-xl'>
                                 <div className='flex flex-row justify-between items-center'>
                                     <div className='font-lato font-medium text-[15px] capitalize'>{clinic.name}</div>      
                                     <div className='flex flex-row items-center gap-1'>                          
@@ -87,7 +93,7 @@ export default function VetClinicSection() {
                                         </div>
                                     </div>
                                     <div className='flex flex-col'>
-                                        <Button className='text-[13px] font-lato font-semibold border hover:border-amber-800 bg-amber-800 hover:shadow-xl hover:bg-white hover:cursor-pointer p-3 rounded-lg text-white hover:text-amber-800 tracking-wider transition duration-200 ease-in-out mt-4'>Book Appointment</Button>
+                                        <Button className='text-[13px] font-lato font-semibold border hover:border-amber-800 bg-amber-800 hover:shadow-xl hover:bg-white hover:cursor-pointer px-3 py-3 rounded-lg text-white hover:text-amber-800 tracking-wider transition duration-200 ease-in-out mt-4'>Book Appointment</Button>
                                     </div>
                                 </div>
                                 

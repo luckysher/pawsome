@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Button } from "@/components/ui/button";
+
 
 export function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -19,7 +21,10 @@ export function Header() {
         { href: "/vetenery", title: "Vetenery", subMenu: [{ href: "/vetenery-1", title: "Vetenery-1"}, { href: "/vetenery-2", title: "Vetenery-2"}] },
         { href: "/community", title: "Community", subMenu: [] }
     ];
-    
+
+    const handleHamburClick = () => {
+        setMenuOpen(!isMenuOpen);
+    }
 
     return (
         <>
@@ -113,28 +118,34 @@ export function Header() {
 
                 {/* Header for smaller screens */}
                 <header
-                    className={`flex lg:hidden bg-white sticky top-0 z-50 px-4 py-3 shadow-md relative transition-all duration-500 ${isMenuOpen ? 'rounded-t-xl' : 'rounded-xl'
+                    className={`flex lg:hidden bg-white top-0 z-50 px-4 py-3 shadow-md relative transition-all duration-500 ${isMenuOpen ? 'rounded-t-xl' : 'rounded-xl'
                         }`}
                 >
                     {/* Logo */}
-                    <div className="flex items-center">
-                    <Link href="/" className="flex items-center space-x-2">
-
-                        <Image
-                            src="/logo.png"
-                            alt="Logo"
-                            width={30}
-                            height={30}
-                            priority
-                        />
-                    <span className="inline-block font-black text-lg">{siteConfig.name}</span></Link>
-
+                    <div className="flex items-center justify-between w-full">
+                        <div className="flex">
+                            <Link href="/" className="flex items-center space-x-2">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Logo"
+                                    width={30}
+                                    height={30}
+                                    priority
+                                />
+                            <span className="inline-block font-black text-lg">{siteConfig.name}</span></Link>
+                        </div>
+                        <div className="flex">
+                            <div className='flex flex-col items-center justify-center text-lg font-lato border hover:border-amber-800 bg-amber-800 hover:shadow-xl hover:bg-white hover:cursor-pointer px-5 rounded-lg text-white hover:text-amber-800 tracking-wider transition duration-200 ease-in-out mt-4' onClick={handleHamburClick}>
+                                <span className={`transiation-all duration-500 ${isMenuOpen? "rotate-45 mt-0 translate-y-1.5": "rotate-90"}`}>|</span>
+                                <span className="rotate-90 -mt-5.5">|</span>
+                                <span className={`transiation-all duration-500 ${isMenuOpen? "rotate-130 -mt-5.5 -translate-y-1.5": "rotate-90 -mt-5.5"}`}>|</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Menu */}
                     <div
-                        className={`absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl z-40 transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-[500px]" : "max-h-0"
-                            }`}
+                        className={`absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl z-40 transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-125" : "max-h-0"}`}
                     >
                         <nav className="flex flex-col space-y-2 p-4">
                             {items.map((item, index) => (
