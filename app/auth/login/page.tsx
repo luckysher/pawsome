@@ -11,8 +11,8 @@ export default function LoginPage() {
     }
 
     return (
-        <div className='flex justify-between px-35 py-18 items-center'>
-            <div className='flex flex-col w-5/12 py-1'> 
+        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row justify-between px-10 sm:px-10 lg:px-35 xl:px-35 2xl:px-35 py-18 items-center'>
+            <div className='hidden md:flex lg:flex xl:flex 2xl:flex flex-col w-5/12 py-1 mt-5 sm:mt-5 md:mt-5 lg:mt-auto xl:mt-auto 2xl:mt-auto'> 
                 <div className='py-1'>
                     <p className='text-lg font-semibold text-gray-500 font-lato '>Have a Pet ?</p>
                     <div className='flex flex-row gap-1'>
@@ -32,11 +32,10 @@ export default function LoginPage() {
                         alt="Logo"
                         width={405}
                         height={0}
-
                     />  
                 </div>
             </div>
-            <div className='flex flex-col w-5/12'> 
+            <div className='flex flex-col w-2/3 sm:w-2/3 md:w-5/12 xl:w-5/12 2xl:w-5/12 mt-20 sm:mt-20 md:mt-auto  lg:mt-auto xl:mt-auto 2xl:mt-auto'> 
                 <h4 className='font-karma font-bold text-3xl text-gray-700 mt-12'>Log in </h4>
                 <small className='font-karla font-normal text-gray-500 text-base'>Please sign in to access your account</small>
                 <div className='py-10'>
