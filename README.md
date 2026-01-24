@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PawsomeUI:
+==========
+Pawsome basically a Figma design to Frontend conversion project for the figma link:
 
-## Getting Started
+https://www.figma.com/design/6QvBChbQ4jTZ6fz/Pawsome--Copy-?node-id=5212-10679&t=GLKXAX0jxkOIsBjV-0
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frameworks used:
+----------------
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    - JS Framework: React / Next Js 
+    - Typescript
+    - CSS Framework: Tailwind css     
+    - 100% Responsive
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# How to install ?
+download the project from the github repo and run the following npm command
 
-## Learn More
+    npm i or npm install
 
-To learn more about Next.js, take a look at the following resources:
+# How to run ?
+        npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The frontend server will start on 3000 port number.
+and you can checkout the frontend at the link localhost:3000 in your web browser.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Screenshots of developed
+ UI on right side along with figma design on right side
+--------------------------------------------------------------------------------------------------
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/login.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/otp.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/signup.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/success.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/pet-info.png)	
+![basic-features](https://github.com/luckysher/passpopawsomertui/blob/main/screens/medical.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home-1.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home2.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home3.png)	
+
+Full page screen shot of developed page at full screen
+---------------------------------------
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/full_screenshot.png)
+
