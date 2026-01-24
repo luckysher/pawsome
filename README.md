@@ -28,7 +28,7 @@ and you can checkout the frontend at the link localhost:3000 in your web browser
 
 
 Screenshots of developed
- UI on right side along with figma design on right side
+ UI on right side along with figma design on left side
 --------------------------------------------------------------------------------------------------
 
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/login.png)	
@@ -36,7 +36,7 @@ Screenshots of developed
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/signup.png)	
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/success.png)	
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/pet-info.png)	
-![basic-features](https://github.com/luckysher/passpopawsomertui/blob/main/screens/medical.png)	
+![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/medical.png)	
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home-1.png)	
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home2.png)	
 ![basic-features](https://github.com/luckysher/pawsome/blob/main/screens/home3.png)	
