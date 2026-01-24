@@ -35,7 +35,7 @@ export default function LoginPage() {
                     />  
                 </div>
             </div>
-            <div className='flex flex-col w-2/3 sm:w-2/3 md:w-5/12 xl:w-5/12 2xl:w-5/12 mt-20 sm:mt-20 md:mt-auto  lg:mt-auto xl:mt-auto 2xl:mt-auto'> 
+            <div className='flex flex-col w-full sm:w-2/3 md:w-5/12 xl:w-5/12 2xl:w-5/12 mt-30 sm:mt-20 md:mt-auto  lg:mt-auto xl:mt-auto 2xl:mt-auto'> 
                 <h4 className='font-karma font-bold text-3xl text-gray-700 mt-12'>Log in </h4>
                 <small className='font-karla font-normal text-gray-500 text-base'>Please sign in to access your account</small>
                 <div className='py-10'>

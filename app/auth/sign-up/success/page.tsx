@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function SuccessPage() {
     return (
         <div className='flex flex-col items-center'>
-            <div className='flex flex-col w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 items-center px-2 sm:px-10 md:px-2 lg:px-10 xl:px-10 2xl:px-10'>
+            <div className='flex flex-col w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 items-center px-5 sm:px-10 md:px-2 lg:px-10 xl:px-10 2xl:px-10'>
                 <div className='flex flex-col items-center mt-28 py-1'>
                     <Image
                         src="/tick_icon.png"

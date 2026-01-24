@@ -11,9 +11,9 @@ export function Footer() {
     return (
         <>
             <div className="mt-15">                
-                <footer className="flex flex-col border-t border-t-gray-400 pt-16 pr-10 overflow-x-hidden">
+                <footer className="flex flex-col border-t border-t-gray-400 pt-2 sm:pt-16 md:pt-16 lg:pt-16 xl:pt-16 2xl:pt-16 pr-0 sm:pr-10 md:pr-10 lg:pr-10 xl:pr-10 2xl:pr-10 overflow-x-hidden">
                     <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row justify-between">
-                        <div className="flex flex-col w-1/4 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">                    
+                        <div className="flex flex-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">                    
                             {/* Logo */}
                             <Link href="/" className="flex items-center space-x-2">
                                 <Image
@@ -42,7 +42,7 @@ export function Footer() {
                                     ))
                                 }
                         </div>
-                        <div className="flex flex-col w-2/3 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">
+                        <div className="flex flex-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">
                             <h5 className="mb-4 font-inter font-semibold text-base">Get Email Notifications</h5>
                             <div className="font-inter font-normal text-base mb-3 text-gray-50">Generate outside the box thinking with the possibility to target the low</div>        
                             <form>
