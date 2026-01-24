@@ -1,19 +1,20 @@
 "use client";
 
 interface StepsProp {
-    stepNo: number;
+    stepNo: number,
+    className?: string,
 }
 
 
 export function Steps(props: StepsProp) {
-    const { stepNo } = props;
+    const { stepNo, className } = props;
     const steps = ["basic info", "medical info", "documents"];
     
     return (
-        <div className='flex flex-row justify-end w-1/2'> 
+        <div className={`flex flex-row justify-start sm:justify-start md:justify-end lg:justify-end xl:justify-end 2xl:justify-end w-full lg:w-1/2 xl:w-5/12 2xl:w-1/2 mt-6 sm:mt-6 md:mt-auto lg:mt-auto xl:mt-auto 2xl:mt-auto px-5 sm:px-5 md:px-10 lg:px-16 xl:px-16 2xl:px-16 ${className}`}> 
             {
                 steps.map((step, i) => (
-                    <div className='flex flex-col' key={i}>
+                    <div className={`flex flex-col ${i+1 < steps.length? 'w-full': ''}`} key={i}>
                         <div className='flex items-center'>
                             {
                                 (i < stepNo)?
@@ -32,9 +33,9 @@ export function Steps(props: StepsProp) {
                             }
                             {
                                 (i < stepNo-1)?
-                                    (i < 2)? (<hr className='text-amber-800 w-45 border transition duration-500 ease-in-out'></hr>): ("")
+                                    (i < 2)? (<hr className='text-amber-800 w-full 2xl:w-auto border transition duration-500 ease-in-out'></hr>): ("")
                                 :
-                                    (i < 2)? (<hr className='text-gray-100 w-45 border transition duration-500 ease-in-out'></hr>): ("")
+                                    (i < 2)? (<hr className='text-gray-100 w-full border transition duration-500 ease-in-out'></hr>): ("")
                             }    
                         </div>
                         <div className={(i < stepNo)? 'text-amber-700 font-medium font-lato text-xs capitalize -ml-4': 'text-gray-300 font-medium font-lato text-xs capitalize -ml-4'}>{step}</div>

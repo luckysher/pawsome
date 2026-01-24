@@ -20,7 +20,7 @@ export default function MedicalInfoPage() {
     return (
         <div className=' px-5 pt-30'>
             
-            <div className='flex flex-row items-center w-full'> 
+            <div className='flex flex-col justify-between sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row items-start sm:items-start md:items-start lg:items-center xl:items-center 2xl:items-center w-full'>  
                 <div className='flex text-2xl font-semibold text-gray-700 font-lato gap-2 w-1/2'>
                     <Icon className='font-bold h-6 w-6 text-gray-700' icon="mdi-light:arrow-left" /> 
                     Add new Pet
@@ -29,7 +29,7 @@ export default function MedicalInfoPage() {
             </div>
             <div className='flex flex-row mt-10'>                
                 <div className='flex flex-col flex-1'>
-                    <form className='flex flex-row gap-10'>
+                    <form className='flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-10'>
                         <div className='flex flex-col flex-1'>
                             <div className='flex flex-row gap-4'>
                                 <Image
@@ -87,7 +87,7 @@ export default function MedicalInfoPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex flex-col flex-1 mt-17'>
+                        <div className='flex flex-col flex-1 -mt-7 md:mt-17 lg:mt-17 xl:mt-17 2xl:mt-17'>
                             <div className='flex flex-row gap-12'>
                                 <div className="bg-white rounded-lg">
                                     <div className="relative bg-inherit flex items-center text-xs mb-6 md:mb-8 ">                                                                
@@ -138,7 +138,7 @@ export default function MedicalInfoPage() {
                         </div>
                     </form>
                 </div>
-                <div className='flex flex-col ml-20'>
+                <div className='flex-col hidden lg:flex xl:flex 2xl:flex ml-20'>
                     <Image
                         src={"/dogImg.png"}
                         alt="DogImage"

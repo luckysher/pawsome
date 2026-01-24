@@ -126,3 +126,7 @@ input[type="radio"]:checked {
 .react-multi-carousel-list {
   width: 1100px;
 }
+
+input[type="text"], input[type="date"] {
+  height:42px
+}

@@ -42,7 +42,7 @@ export function Footer() {
                                     ))
                                 }
                         </div>
-                        <div className="flex flex-col w-1/4 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">
+                        <div className="flex flex-col w-2/3 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 px-4">
                             <h5 className="mb-4 font-inter font-semibold text-base">Get Email Notifications</h5>
                             <div className="font-inter font-normal text-base mb-3 text-gray-50">Generate outside the box thinking with the possibility to target the low</div>        
                             <form>

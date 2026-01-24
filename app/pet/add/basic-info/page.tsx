@@ -8,7 +8,7 @@ import { Steps } from "@/components/steps";
 
 export default function BasicInfoPage() {
     
-    const [files, setFile] = useState<File[] | undefined[]>([,,,]);
+    const [files, setFile] = useState<Array<File | string>>(['','','',]);
 
     const file1Ref = useRef<HTMLInputElement>(null);
     const file2Ref = useRef<HTMLInputElement>(null);
@@ -45,15 +45,15 @@ export default function BasicInfoPage() {
 
 
     const petTypes = [{'type': 'dog', 'icon': 'dog.svg'}, {'type': 'cat', 'icon': 'cat.svg'}];
-
+    
     return (
         <div className=' px-5 pt-30'>
-            <div className='flex flex-row items-center w-full'> 
+            <div className='flex flex-col justify-between sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row items-start sm:items-start md:items-start lg:items-center xl:items-center 2xl:items-center w-full'> 
                 <div className='flex text-2xl font-semibold text-gray-700 font-lato gap-2 w-1/2'>
                     <Icon className='font-bold h-6 w-6 text-gray-700' icon="mdi-light:arrow-left" /> 
                     Add new Pet
-                </div>
-                <Steps stepNo={1} />
+                </div>                
+                <Steps stepNo={1} />                
                 
             </div>
             <form>
@@ -79,7 +79,7 @@ export default function BasicInfoPage() {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-row gap-15 mt-5'>
+                <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-5 sm:gap-5 md:gap-5 lg:gap-10 xl:gap-10 2xl:gap-10 mt-5 pr-0 lg:pr-50 xl:pr-50 2xl:pr-50'>
                     <div className='flex flex-col flex-1'>
                         <div className="bg-white rounded-lg">
                             <div className="relative bg-inherit flex items-center text-xs mb-6 md:mb-8 ">                                
@@ -156,7 +156,7 @@ export default function BasicInfoPage() {
                             </div>
                         </div>                        
                     </div>
-                    <div className='flex flex-col flex-1'>                        
+                    <div className='flex flex-col flex-1 -mt-7 sm:-mt-7 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0'>                        
                         <div className="bg-white rounded-lg">
                             <div className="bg-inherit flex items-center text-xs mb-6 md:mb-8 relative">                                
                                 <select id="pet_source" className="block w-full px-3 py-2.5 border border-gray-400 text-sm text-gray-400 rounded-lg shadow-xs placeholder:text-body appearance-none outline-none">
